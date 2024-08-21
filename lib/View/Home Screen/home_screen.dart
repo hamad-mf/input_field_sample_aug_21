@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     focusedBorder: OutlineInputBorder(),
                     label: Text("Name"),
                     hintText: 'Enter your name',
-                    fillColor: const Color.fromARGB(255, 228, 95, 95),
+                    fillColor: Colors.grey,
                     filled: true,
                     suffixIcon: Icon(Icons.person),
                     prefixIcon: Icon(Icons.text_fields_outlined)),
