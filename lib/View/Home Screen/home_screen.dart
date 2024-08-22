@@ -8,9 +8,20 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  TextEditingController nameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print(nameController.text);
+          setState(() {
+            
+          });
+        },
+        child: Icon(Icons.print),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -18,6 +29,8 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
+                controller: nameController,
+                readOnly: false,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(),
                     label: Text("Name"),
@@ -28,6 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     prefixIcon: Icon(Icons.text_fields_outlined)),
               ),
             ),
+            Text(nameController.text),
+            
           ],
         ),
       ),
